@@ -1,3 +1,7 @@
+#include <string>
+
+using namespace std;
+
 class card {
 	
 public:
@@ -13,5 +17,12 @@ public:
 	card(int v, char s) {
 		value = v;
 		suit = s;
+	}
+	string displayCard() {
+		string displayValue = "[";
+		if (value < 11) {
+			displayValue += to_string(value);
+		}
+		return displayValue
 	}
 };
