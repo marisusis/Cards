@@ -23,6 +23,22 @@ public:
 		if (value < 11) {
 			displayValue += to_string(value);
 		}
-		return displayValue
+		if (value == 11) {
+			displayValue += "J";
+		}
+		if (value == 12) {
+			displayValue += "Q";
+		}
+		if (value == 13) {
+			displayValue += "K";
+		}
+		if (value == 14) {
+			displayValue += "A";
+		}
+		displayValue += "-";
+		displayValue += suit;
+		displayValue += "]";
+
+		return displayValue;
 	}
 };
